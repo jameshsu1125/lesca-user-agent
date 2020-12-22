@@ -1,6 +1,6 @@
 {
 	"name": "lesca-userAgent",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "simple detect each browser from device userAgent",
 	"main": "lib/index.js",
 	"scripts": {
