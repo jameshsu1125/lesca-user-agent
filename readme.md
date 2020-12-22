@@ -8,7 +8,7 @@ $ npm install lesca-userAgent --save
 
 # Usage
 
-### location redirect
+- location redirect
 
 ```javascript
 import UserAgent from 'lesca-userAgent';
@@ -16,7 +16,7 @@ import UserAgent from 'lesca-userAgent';
 if (UserAgent.get() === 'mobile') window.location.replace('./m/');
 ```
 
-### detect device
+- detect device
 
 ```javascript
 import UserAgent from 'lesca-userAgent';
