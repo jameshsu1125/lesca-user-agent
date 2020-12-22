@@ -3,7 +3,7 @@
 # Installation
 
 ```sh
-$ npm install lesca-userAgent --save
+$ npm install lesca-user-agent --save
 ```
 
 # Usage
@@ -11,7 +11,7 @@ $ npm install lesca-userAgent --save
 - location redirect
 
 ```javascript
-import UserAgent from 'lesca-userAgent';
+import UserAgent from 'lesca-user-agent';
 
 if (UserAgent.get() === 'mobile') window.location.replace('./m/');
 ```
@@ -19,7 +19,7 @@ if (UserAgent.get() === 'mobile') window.location.replace('./m/');
 - detect device
 
 ```javascript
-import UserAgent from 'lesca-userAgent';
+import UserAgent from 'lesca-user-agent';
 
 function download() {
 	if (UserAgent.Ios.is()) window.open('https://apps.apple.com/us/app/github/id1477376905');
