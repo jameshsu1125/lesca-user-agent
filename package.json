@@ -1,7 +1,7 @@
 {
-	"name": "npm-base-package",
-	"version": "0.0.0",
-	"description": "npm-base-package",
+	"name": "lesca-userAgent",
+	"version": "1.0.0",
+	"description": "simple detect each browser from device userAgent",
 	"main": "lib/index.js",
 	"scripts": {
 		"start": "webpack-dev-server --mode development",
@@ -43,9 +43,12 @@
 		"webpack-dev-server": "^3.1.3"
 	},
 	"author": "jamehsu1125 <jameshsu1125@gmail.com>",
-	"homepage": "https://github.com/jameshsu1125/npm-base-package",
+	"homepage": "https://github.com/jameshsu1125/lesca-userAgent",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:jameshsu1125/npm-base-package.git"
+		"url": "git@github.com:jameshsu1125/lesca-userAgent.git"
+	},
+	"dependencies": {
+		"mobile-detect": "^1.4.4"
 	}
 }
