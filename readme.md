@@ -25,10 +25,12 @@ if (UserAgent.get() === 'mobile') window.location.replace('./m/');
 ```javascript
 import UserAgent from 'lesca-user-agent';
 
+const appIOS = 'https://apps.apple.com/us/app/github/id1477376905';
+const appAndroid = 'https://play.google.com/store/apps/details?id=com.github.android';
+
 function download() {
-	if (UserAgent.ios()) window.open('https://apps.apple.com/us/app/github/id1477376905');
-	else
-		window.open('https://play.google.com/store/apps/details?id=com.github.android&hl=zh_TW&gl=US');
+	if (UserAgent.ios()) window.open(appIOS);
+	else window.open(appAndroid);
 }
 
 <button onClick={download}>download github</button>;
