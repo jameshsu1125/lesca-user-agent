@@ -1,10 +1,14 @@
-[![dev by JamesHsu](https://img.shields.io/badge/Dev%20by-Jameshsu1125-green)](https://github.com/jameshsu1125/) [![made in Taiwan](https://img.shields.io/badge/Made%20in-Taiwan-orange)](https://github.com/jameshsu1125/)
+[![dev by JamesHsu](https://img.shields.io/badge/Dev%20by-Jameshsu1125-green)](https://github.com/jameshsu1125/) [![made in Taiwan](https://img.shields.io/badge/Made%20in-Taiwan-orange)](https://github.com/jameshsu1125/) [![npm](https://img.shields.io/badge/npm-Jameshsu1125-red)](https://www.npmjs.com/~jameshsu1125)
 
 # Installation
 
 ```sh
 $ npm install lesca-user-agent --save
 ```
+
+# Demo
+
+[Live Demo](https://jameshsu1125.github.io/lesca-user-agent/)
 
 # Usage
 
@@ -22,8 +26,9 @@ if (UserAgent.get() === 'mobile') window.location.replace('./m/');
 import UserAgent from 'lesca-user-agent';
 
 function download() {
-	if (UserAgent.Ios.is()) window.open('https://apps.apple.com/us/app/github/id1477376905');
-	else window.open('https://play.google.com/store/apps/details?id=com.github.android&hl=zh_TW&gl=US');
+	if (UserAgent.ios()) window.open('https://apps.apple.com/us/app/github/id1477376905');
+	else
+		window.open('https://play.google.com/store/apps/details?id=com.github.android&hl=zh_TW&gl=US');
 }
 
 <button onClick={download}>download github</button>;
@@ -37,12 +42,12 @@ function download() {
 
 # Properties
 
-| Properties    | type |     description     | default |
-| :------------ | :--: | :-----------------: | ------: |
-| Wechat.is()   | func |  is wechat browser  |         |
-| Facebook.is() | func | is facebook browser |         |
-| Line.is()     | func |   is Line browser   |         |
-| Ios.is()      | func |   is Ios browser    |         |
-| Ios.Android() | func | is Android browser  |         |
-| Ios.Mac()     | func |   is Mac browser    |         |
-| Ios.PC()      | func |    is PC browser    |         |
+| Properties  | type |     description     | default |
+| :---------- | :--: | :-----------------: | ------: |
+| .wechat()   | func |  is wechat browser  |         |
+| .facebook() | func | is facebook browser |         |
+| .line()     | func |   is Line browser   |         |
+| .ios()      | func |   is Ios browser    |         |
+| .android()  | func | is Android browser  |         |
+| .mac()      | func |   is Mac browser    |         |
+| .pc()       | func |    is PC browser    |         |
