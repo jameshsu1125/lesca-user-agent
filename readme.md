@@ -38,18 +38,13 @@ function download() {
 
 # Methods
 
-| method                  |      options       |   description    | default |
-| :---------------------- | :----------------: | :--------------: | ------: |
-| get(tabletEqualDesktop) | tabletEqualDesktop | tablet = Desktop |   false |
-
-# Properties
-
-| Properties  | type |     description     | default |
-| :---------- | :--: | :-----------------: | ------: |
-| .wechat()   | func |  is wechat browser  |         |
-| .facebook() | func | is facebook browser |         |
-| .line()     | func |   is Line browser   |         |
-| .ios()      | func |   is Ios browser    |         |
-| .android()  | func | is Android browser  |         |
-| .mac()      | func |   is Mac browser    |         |
-| .pc()       | func |    is PC browser    |         |
+| method                  |   type   |     description     | default |
+| :---------------------- | :------: | :-----------------: | ------: |
+| get(tabletEqualDesktop) | function |   get user device   |         |
+| > tabletEqualDesktop    | boolean  |  tablet = Desktop   |   false |
+| .facebook()             | function | is facebook browser |         |
+| .line()                 | function |   is Line browser   |         |
+| .ios()                  | function |   is Ios browser    |         |
+| .android()              | function | is Android browser  |         |
+| .mac()                  | function |   is Mac browser    |         |
+| .pc()                   | function |    is PC browser    |         |
