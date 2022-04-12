@@ -1,41 +1,35 @@
-import Qrcode from 'lesca-react-qrcode';
-import { render } from 'react-dom';
-import { Code, Navation } from './components';
-import Demo from './demo';
+import { Container } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Navigation from './components/navigation';
+import Demo from './pages/demo';
+import Usage from './pages/usage';
 import './styles.less';
+import { theme } from './theme';
 
-const homepage = 'https://github.com/jameshsu1125/lesca-user-agent';
-const name = 'lesca-user-agent';
-const description = 'simple detect device userAgent';
+const App = () => {
+  const [state, setState] = useState('demo');
 
-const Page = () => {
-	return (
-		<>
-			<Navation />
-			<div className='content'>
-				<div>
-					<h1>{name}</h1>
-					<figcaption>{description}</figcaption>
-				</div>
-				<div>
-					<h2>install</h2>
-					<Code code={`npm install ${name} --save`} theme='markup' />
-				</div>
+  const appendPage = () => {
+    switch (state) {
+      default:
+      case 'demo':
+        return <Demo />;
 
-				<div>
-					<h2>test on mobile</h2>
-					<Qrcode content={window.location.href} size='300' />
-				</div>
+      case 'usage':
+        return <Usage />;
+    }
+  };
 
-				<Demo />
-
-				<div>
-					<h2>Usage</h2>
-					<a href={homepage}>Documentation</a>
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <ThemeProvider theme={theme}>
+      <Navigation setState={setState} state={state} />
+      <Container style={{ paddingTop: '70px' }} maxWidth='lg'>
+        {appendPage()}
+      </Container>
+    </ThemeProvider>
+  );
 };
 
-render(<Page />, document.getElementById('app'));
+createRoot(document.getElementById('app')).render(<App />);
