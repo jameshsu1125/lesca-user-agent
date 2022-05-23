@@ -60,5 +60,4 @@ function download() {
 
 ### Features
 
-- TypeScript
 - maintain if necessary

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import UserAgent from '../../lib/';
+import UserAgent from '../../lib/index';
 
 const Demo = () => {
   useEffect(() => {}, []);
