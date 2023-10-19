@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import UserAgent from '../../lib/index';
+import UserAgent, { UserAgentType } from '../../lib/index';
 
 const Demo = () => {
   useEffect(() => {}, []);
@@ -9,7 +9,7 @@ const Demo = () => {
 
       <h4>What is your device?</h4>
       <pre>
-        <code>{UserAgent.get()}</code>
+        <code>{UserAgent.get() === UserAgentType.Desktop ? 'desktop' : 'mobile'}</code>
       </pre>
 
       <h4>Is it facebook in-app browser?</h4>

@@ -13,23 +13,12 @@ const Menu = ({ setState, state }) => (
     >
       Demo
     </Button>
-    <Button
-      onClick={() => {
-        setState('usage');
-      }}
-      disabled={state === 'usage'}
-    >
-      Usage
-    </Button>
   </ButtonGroup>
 );
 
 const Navigation = ({ setState, state }) => (
   <div className='Navigation'>
     <div className='logo'>{name}</div>
-    <div className='menu'>
-      <Menu setState={setState} state={state} />
-    </div>
   </div>
 );
 export default Navigation;

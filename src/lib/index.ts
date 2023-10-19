@@ -1,12 +1,17 @@
 import MobileDetect from 'mobile-detect';
 
-const get = (tabletEqualDesktop = false) => {
+export enum UserAgentType {
+  Desktop = 0,
+  Mobile = 1,
+}
+
+const get = (tabletEqualDesktop = false): UserAgentType => {
   let mobileDetect = new MobileDetect(window.navigator.userAgent);
   if (mobileDetect.tablet()) {
-    if (tabletEqualDesktop) return 'desktop';
-    else return 'mobile';
-  } else if (mobileDetect.mobile()) return 'mobile';
-  else return 'desktop';
+    if (tabletEqualDesktop) return UserAgentType.Desktop;
+    else return UserAgentType.Mobile;
+  } else if (mobileDetect.mobile()) return UserAgentType.Mobile;
+  else return UserAgentType.Desktop;
 };
 
 const facebook = () => {

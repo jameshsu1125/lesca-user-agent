@@ -1,6 +1,6 @@
 {
   "name": "lesca-user-agent",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "simple detect device userAgent",
   "main": "lib/index.js",
   "scripts": {
@@ -9,14 +9,12 @@
     "build": "NODE_ENV=production webpack",
     "deploy": "gh-pages -d dist",
     "tsc": "npx tsc --watch",
-    "dev": "concurrently \"npm run watch\" \"npm run tsc\" \"npm run start\"",
+    "dev": "concurrently \"npm run tsc\" \"npm run watch\" \"npm run start\"",
     "rm": "rm -rf node_modules/ package-lock.json",
     "op": "babel src/lib -d lib --copy-files"
   },
   "keywords": [
     "lesca",
-    "衝康吉",
-    "jameshsu1125",
     "useragent"
   ],
   "license": "MIT",
@@ -59,6 +57,7 @@
   },
   "author": "jamehsu1125 <jameshsu1125@gmail.com>",
   "dependencies": {
+    "@babel/runtime": "^7.23.2",
     "mobile-detect": "^1.4.5"
   }
 }
