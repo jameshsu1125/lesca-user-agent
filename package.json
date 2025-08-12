@@ -1,8 +1,8 @@
 {
-  "name": "template-npm-vite",
+  "name": "lesca-user-agent",
   "private": false,
-  "description": "xxxxx",
-  "version": "0.0.0",
+  "description": "simple detect device userAgent",
+  "version": "3.0.0",
   "type": "module",
   "keywords": [
     "lesca"
