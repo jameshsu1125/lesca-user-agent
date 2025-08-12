@@ -1,9 +1,9 @@
-import YourClass from '.';
+import YourClass, { UserAgentType } from '.';
 
 const createApp = () => {
   return new Promise<HTMLElement>((resolve) => {
     const app = document.createElement('div');
-    app.innerHTML = 'Hello, World!';
+    app.innerHTML = String(YourClass.get() === UserAgentType.Desktop);
     console.log(YourClass);
     resolve(app);
   });
